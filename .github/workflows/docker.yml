@@ -13,6 +13,6 @@ jobs:
           test -f site/style.css || exit 1
       - name: Build and Push
         run: |
-          docker build -t docker.io/rudesandwich/my-static-site-two:latest .
+          docker build -t docker.io/sandwich5230/my-static-site-two:latest .
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker push docker.io/rudesandwich/my-static-site-two:latest
+          docker push docker.io/sandwich5230/my-static-site-two:latest
